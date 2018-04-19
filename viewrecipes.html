@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Casual - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casuall.min.css" rel="stylesheet">
+  <style>
+    button{
+      display: inline-block;
+    }
+    * {
+  box-sizing: border-box;
+    }
+    
+    /* Style the search field */
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+    }
+    
+    /* Style the submit button */
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none; /* Prevent double borders */
+      cursor: pointer;
+    }
+    
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    
+    /* Clear floats */
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+  </head>
+
+  <body>
+
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Meal Planner & Recipe System </span>
+      <span class="site-heading-lower">Keep it Healthy</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Meal Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="UserHome.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewmeal.html">Meal Plans</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/veiwrecipes.html">View Recipes</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewprofile.html">View Profile</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/updateprofile.html">Edit Profile</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewallprofiles.html">View All Profiles</a>
+            </li>               
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/trackingredients.html">Track Ingredients</a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-upper"></span>
+                <span class="section-heading-lower">Your Recipes</span>
+              </h2>
+              <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                <li class="list-unstyled-item list-hours-item d-flex">
+                  Recipe Name
+                  <span class="ml-auto">Creation Date</span>
+                </li>
+
+                
+                <p id="getrecipe">
+                   <label id=""></label>
+                </p>
+              </ul> 
+
+            </div>
+          </div>
+          <p class="address mb-5">
+              
+               <a href="/addrecipe.html" ><button id='btnthis'>Create A Recipe</button></a>
+               
+               </br>
+            <!-- Load icon library -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            
+            <!-- The form -->
+            <form class="example" action="searchrecipe.php" method="post">
+              <input type="text" placeholder="Search For A Recipe.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </p>
+          </br>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Healthy Living</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+    <script type="text/javascript">
+                        
+    // Check if the page has loaded completely                                         
+    // Check if the page has loaded completely                                         
+    $(document).ready( function() {
+    $('#getrecipe').load('/viewrecipes.php');
+    }); 
+
+    </script> 
+
+  </body>
+
+  <!-- Script to highlight the active date in the hours list -->
+  <script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+  </script>
+
+</html>

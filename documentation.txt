@@ -1,0 +1,64 @@
+Documentation of All Queries
+
+Sign up:
+
+Select account_id from Account;
+
+
+Creation date of recipe:
+
+SELECT recipe_name,creationdate FROM Recipe;
+
+Track Ingredients:
+
+select status,hasInStock.ingredient_id,Ingredients.ingredient_id,name 
+      from hasInStock 
+      JOIN Ingredients
+      ON hasInStock.ingredient_id = Ingredients.ingredient_id
+      where status='True';
+
+
+Track Calorie count of planned meals:
+
+select calorie_count from Mealplan;
+
+
+STORED PROCEDURE
+
+Creation date of recipe
+
+DELIMITER //
+    CREATE PROCEDURE GetCreationDate() BEGIN
+    SELECT recipe_name, creationdate FROM Recipe;
+    END //
+DELIMITER ;
+
+CALL GetCreationDate();
+
+Track Calorie Count of planned meals
+
+DELIMITER //
+    CREATE PROCEDURE GetCalorieCount() BEGIN
+    SELECT calorie_count FROM Mealplan;
+    END //
+DELIMITER ;
+
+CALL GetCalorieCount();
+
+DELIMITER //
+    CREATE PROCEDURE TrackIngredients() BEGIN
+    select status,hasInStock.ingredient_id,Ingredients.ingredient_id,name 
+      from hasInStock 
+      JOIN Ingredients
+      ON hasInStock.ingredient_id = Ingredients.ingredient_id
+      where status='True';
+     END //
+DELIMITER ;
+
+#mealplan
+
+
+you want to select ingredient_name
+(Join mealplan(meal_id) to meal(meal_id), then Meal(meal_id) to uses(meal_id), then uses(Recipe_id) to Recipe(RecipeID))
+
+

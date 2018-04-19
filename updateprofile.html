@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Keep it Healthy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+    
+    /* css class for the edit profile generated errors */
+    .profilepress-edit-profile-status {
+      width: 400px;
+      text-align: center;
+      background-color: #e74c3c;
+      color: #ffffff;
+      border: medium none;
+      border-radius: 4px;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 1.4;
+      padding: 8px 5px;
+      margin: auto;
+    }
+    
+    .memo-edprofile-success {
+      width: 400px;
+      text-align: center;
+      background-color: #2ecc71;
+      color: #ffffff;
+      border: medium none;
+      border-radius: 4px;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 1.4;
+      padding: 8px 5px;
+      margin: auto;
+    }
+    
+    #sc-edprofile {
+      background: #f0f0f0;
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 8px;
+      margin-bottom: 2%;
+      transition: opacity 1s;
+      -webkit-transition: opacity 1s;
+    }
+    
+    #sc-edprofile h1 {
+      background: #3399cc;
+      padding: 20px 0;
+      font-size: 140%;
+      font-weight: 300;
+      text-align: center;
+      color: #fff;
+    }
+    
+    div#sc-edprofile .sc-container {
+      background: #f0f0f0;
+      padding: 6% 4%;
+    }
+    
+    div#sc-edprofile input[type="email"],
+    div#sc-edprofile input[type="text"],
+    div#sc-edprofile input[type="password"], div#sc-edprofile select, div#sc-edprofile textarea {
+      width: 92%;
+      background: #fff;
+      margin-bottom: 4%;
+      border: 1px solid #ccc;
+      padding: 4%;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 95%;
+      color: #555;
+    }
+    
+    div#sc-edprofile select {
+      width: 100%;
+    }
+    
+    div#sc-edprofile textarea {
+      height: 100px;
+    }
+    
+    div#sc-edprofile input[type="submit"] {
+      width: 100%;
+      background: #3399cc;
+      border: 0;
+      padding: 4%;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 100%;
+      color: #fff;
+      cursor: pointer;
+      transition: background .3s;
+      -webkit-transition: background .3s;
+    }
+    
+    div#sc-edprofile input[type="submit"]:hover {
+      background: #2288bb;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Meal Planner & Recipe System </span>
+      <span class="site-heading-lower">Keep it Healthy</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Meal Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="UserHome.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewprofile.html">View Profile</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<div id="sc-edprofile">
+  
+  <h1>Edit Profile Form</h1>
+  <div id="pword">
+    <label>Enter Password</label>
+    <input type="password" placeholder="Password" name="pword" />
+  </div>
+  <div class="sc-container"><!--style="visibility: hidden;"-->
+  <form action="updateprofile.php" method="POST">
+    <input type="text" placeholder="Username" name="username" />
+    <!--<input type="text" placeholder="Email Address" /> -->
+    <input type="password" placeholder="Password" name="password" />
+    <input type="text" placeholder="First Name" name="fname" />
+    <input type="text" placeholder="Last Name" name="lname" />
+    <label>Gluten Intolerant</label>
+    <select name="GI">
+      <option value="">Yes</option>
+      <option value="">No</option>
+    </select name="D">
+    <label>Diabetic</label>
+    <select>
+      <option value="">Yes</option>
+      <option value="">No</option>
+    </select>
+    <label>Lactose Intolerant</label>
+    <select naame="LI">
+      <option value="">Yes</option>
+      <option value="">No</option>
+    </select>
+        <label>Vegetarian</label>
+    <select name="Veg">
+      <option value="">Yes</option>
+      <option value="">No</option>
+    </select>
+    <label>Vegan</label>
+    <select name= "V">
+      <option value="">Yes</option>
+      <option value="">No</option>
+    </select>
+    <input type="submit" value="Update" />
+  </form>
+  </div>
+</div> 
+
+  </body>
+
+</html>
+

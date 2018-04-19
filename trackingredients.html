@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Keep it Healthy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+  <style type="text/css">
+    /*@import url(http://weloveiconfonts.com/api/?family=entypo);*/
+    
+    [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif;
+    }
+    
+    .sc-user-profile {
+      margin: auto;
+      width: 25em;
+      /*background: #fff;*/
+      border-radius: .3em;
+      color:white;
+      font-family: Lora;
+    }
+    
+    .sc-user-profile .left {
+      float: left;
+      padding: 0 15px 10px;
+      width: 20%;
+      font-weight: bold;
+    }
+    
+    .sc-user-profile .right {
+      padding: 0 5px 10px;
+      width: 80%;
+    }
+    
+    .sc-user-profile .username {
+      margin: auto;
+      margin-top: -4.40em;
+      margin-left: 5.80em;
+      color: #658585;
+      font-size: 1.53em;
+      font-family: "Coda", sans-serif;
+      font-weight: bold;
+    }
+    
+    .sc-user-profile .bio {
+      margin: auto;
+      display: inline-block;
+      margin-left: 10.43em;
+      color: #e76043;
+      font-size: .87em;
+      font-family: "varela round", sans-serif;
+    }
+    
+    .sc-user-profile > .description {
+      margin: auto;
+      margin-top: 1.35em;
+      margin-right: 4.43em;
+      width: 14em;
+      color: #c0c5c5;
+      font-size: .87em;
+      font-family: "varela round", sans-serif;
+    }
+    
+    .sc-user-profile > img.avatar {
+      padding: .7em;
+      margin-left: .3em;
+      margin-top: .3em;
+      height: 6.23em;
+      width: 6.23em;
+      border-radius: 18em;
+    }
+    
+    .sc-user-profile div.data {
+      margin: 2em auto 1em;
+      background: #4eb6b6;
+      text-align: center;
+      border-radius: 0 0 .3em .3em;
+    }
+    
+    .sc-user-profile span {
+      font-family: "varela round", sans-serif;
+      color: #e3eeee;
+      white-space: nowrap;
+      font-size: 1.27em;
+      font-weight: bold;
+    }
+    
+    .sc-user-profile span:hover {
+      color: #daebea;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Meal Planner & Recipe System </span>
+      <span class="site-heading-lower">Keep it Healthy</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Meal Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="UserHome.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewmeal.html">Meal Plans</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/veiwrecipes.html">View Recipes</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewprofile.html">View Profile</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/updateprofile.html">Edit Profile</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/viewallprofiles.html">View All Profiles</a>
+            </li>     
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/trackingredients.html">Track Ingredients</a>
+            </li>  
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </br>
+    </br>
+
+    <section class="page-section cta">  
+    <div class="container">
+            <div class="row">
+              <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                  <h2 class="section-heading mb-5">
+                    <span class="section-heading-upper"></span>  
+                      <h1>Available Ingredients</h1>
+                      <p id="trackingredients">
+                        <label id=""></label>
+                      </p> 
+                      <!--<button type="button">Update Available Ingredients</button> -->
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+<!--  <div>
+    <p>Account name: Eddie Twinnie</p>
+    <p>Profile(s):</p>
+    </br>
+    <p>Marcel Twinnie</p>
+    <p>Marcel Twinnie</p>
+    <p>Mark Twinnie</p></p>
+    </br>
+    <p>Account name: Ashly Lawrence</p>
+    <p>Profile(s):</p>
+    </br>
+    <p>Ashley Lawrence</p>
+    <p>Michael Lawrence</p>
+    <p>Melissa Lawrence</p></p>  
+  </div>  -->
+
+</div>
+     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+     <script type="text/javascript">
+                        
+      // Check if the page has loaded completely                                         
+     //$(document).ready( function() {
+       //   $('#vp').load('/viewprofile.php'); 
+
+      //}); 
+  
+     // Check if the page has loaded completely                                         
+    // Check if the page has loaded completely                                         
+    $(document).ready( function() {
+    $('#trackingredients').load('/trackingredients.php');
+    }); 
+                            
+                        
+      </script> 
+</body>
+  
+</html>

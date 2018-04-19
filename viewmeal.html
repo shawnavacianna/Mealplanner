@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Keep it Healthy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Meal Planner & Recipe System </span>
+      <span class="site-heading-lower">Keep it Healthy</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Meal Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="UserHome.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="/planmeal.html">Create a Meal Plan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+     <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">Meal Plan For <p> <script> document.write(new Date().toLocaleDateString()); </script></p> </span>
+     </h1>
+     </br>
+    <section class="page-section">
+      <div class="container">
+        <div class="product-item">
+          <div class="product-item-title d-flex">
+            <div class="bg-faded p-5 d-flex ml-auto rounded">
+              <h2 class="section-heading mb-0" id="titles">
+                <span class="section-heading-upper" id="Mtype1">Breakfast</span>
+                <span class="section-heading-lower" id="Mname1">Eggs</span>
+              </h2>
+            </div>
+          </div>
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="/uploads/How-to-Cook-Hard-Boiled-Eggs-2-1200.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="product-item">
+          <div class="product-item-title d-flex">
+            <div class="bg-faded p-5 d-flex mr-auto rounded">
+              <h2 class="section-heading mb-0" id="titles2">
+                <span class="section-heading-upper" id="Mtype2">Dinner</span>
+                <span class="section-heading-lower" id="Mname2">Chicken & Rice</span>
+              </h2>
+            </div>
+          </div>
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="/uploads/Fall-Off-The-Bone-Chicken-6.jpg">
+            <div class="bg-faded p-5 rounded">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="product-item">
+          <div class="product-item-title d-flex">
+            <div class="bg-faded p-5 d-flex ml-auto rounded">
+              <h2 class="section-heading mb-0" id="titles3">
+                <span class="section-heading-upper" id="Mtype3">Meal Type</span>
+                <span class="section-heading-lower" id="Mname3">Meal Name</span>
+              </h2>
+            </div>
+        </div id=titleimg>
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="/uploads/178966318.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Keep it Healthy</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+     <script type="text/javascript">
+      $(document).ready(function(){
+         $(function () 
+          {
+            //-----------------------------------------------------------------------
+            // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+            //-----------------------------------------------------------------------
+            $.ajax({                                      
+              url: 'viewmeals.php',                  //the script to call to get data          
+              data: "",                        //you can insert url argumnets here to pass to api.php
+                                               //for example "id=5&parent=6"
+              dataType: 'json',                //data format      
+              success: function(data)          //on recieve of reply
+              {
+                var type = data[4];              //get id
+                var name = data[1]; 
+                var imgpath=data[5];//get name
+                //--------------------------------------------------------------------
+                // 3) Update html content
+                //--------------------------------------------------------------------
+                $('#titles3').html("<span>"+type+"</span></b> </b> <p>"+name+"</p>"); //Set output element html
+                $('#titleimg').html("<img class=\"product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0\"scr=\""+imgpath+"\" alt=\"apples and peanut butter\">"); //Set output element html
+
+
+                //recommend reading up on jquery selectors they are awesome 
+                // http://api.jquery.com/category/selectors/
+              } 
+            });
+          }); 
+    });                  
+      // Check if the page has loaded completely                                         
+  /*   $(document).ready( function() {
+          $('#titles').load('/viewmeals.php'); 
+                                 
+          $('#titles2').load('/viewmeals.php'); 
+          
+          $('#titles3').load('/viewmeals.php'); 
+
+      }); */
+                            
+                        
+    </script> 
+
+  </body>
+
+</html>
